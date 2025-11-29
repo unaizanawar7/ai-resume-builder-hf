@@ -1,0 +1,76 @@
+{
+  "templateId": "cv-template",
+  "version": "1.0.0",
+  "metadata": {
+    "name": "CV Template",
+    "description": "Professional CV template with clean layout and structured sections",
+    "mainFile": "CV Template_main.tex"
+  },
+  "colorSchemes": {
+    "default": {
+      "label": "Default",
+      "command": "",
+      "type": "predefined"
+    }
+  },
+  "fonts": {
+    "default": {
+      "label": "Default",
+      "packages": [],
+      "commands": ""
+    }
+  },
+  "sections": {
+    "work": {
+      "label": "Work Experience",
+      "pattern": "\\\\newcommand\\{\\\\workOneTitle\\}[\\s\\S]*?(?=\\\\newcommand\\{\\\\eduOneTitle\\}|\\\\newcommand\\{\\\\langOneFlag\\}|\\\\end\\{document\\})",
+      "startMarker": "\\\\newcommand\\{\\\\workOneTitle\\}",
+      "removable": true
+    },
+    "education": {
+      "label": "Education",
+      "pattern": "\\\\newcommand\\{\\\\eduOneTitle\\}[\\s\\S]*?(?=\\\\newcommand\\{\\\\langOneFlag\\}|\\\\end\\{document\\})",
+      "startMarker": "\\\\newcommand\\{\\\\eduOneTitle\\}",
+      "removable": true
+    }
+  },
+  "placeholders": {
+    "name": {
+      "label": "Name",
+      "type": "text",
+      "default": ""
+    },
+    "email": {
+      "label": "Email",
+      "type": "email",
+      "default": ""
+    },
+    "phone": {
+      "label": "Phone",
+      "type": "phone",
+      "default": ""
+    },
+    "website": {
+      "label": "Website",
+      "type": "url",
+      "default": ""
+    },
+    "photopath": {
+      "label": "Photo Path",
+      "type": "text",
+      "default": ""
+    }
+  },
+  "preambleInsertPoint": "\\\\begin\\{document\\}",
+  "documentInsertPoint": "\\\\begin\\{document\\}",
+  "engine": "pdflatex",
+  "features": {
+    "supportsColorSchemes": false,
+    "supportsFonts": false,
+    "supportsSectionToggle": true,
+    "supportsCustomColors": false
+  }
+}
+
+
+

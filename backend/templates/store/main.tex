@@ -1,0 +1,164 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+
+\ExplSyntaxOn
+\cs_if_exist:NF \prop_gput_if_not_in:NnV
+  {
+    \cs_new_protected:Npn \prop_gput_if_not_in:NnV #1#2#3
+      { \prop_gput_if_not_in:Nnn #1 {#2} { \tl_use:N #3 } }
+  }
+\cs_if_exist:NF \prop_put_if_new:NV
+  {
+    \cs_new_protected:Npn \prop_put_if_new:NV #1#2
+      { \prop_put_if_new:Nn #1 { \tl_use:N #2 } }
+  }
+\ExplSyntaxOff
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{\PLACEHOLDERFIRSTNAME}{\PLACEHOLDERLASTNAME}{\PLACEHOLDERTITLE}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{jack.jpg}
+\end{center}
+
+\bg{cvgreen}{white}{About me}\\[0.5em]
+
+{\footnotesize
+\PLACEHOLDERABOUTME}
+\bigskip
+
+\bg{cvgreen}{white}{personal} \\[0.5em]
+\PLACEHOLDERPERSONALINFO
+
+\bigskip
+
+\bg{cvgreen}{white}{Areas of specialization} \\[0.5em]
+
+\PLACEHOLDERSPECIALIZATION
+
+\bigskip
+
+\PLACEHOLDERINTERESTS
+
+\vspace{4em}
+
+\PLACEHOLDERCONTACTBUBBLES
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Short Resumé}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \PLACEHOLDEREXPERIENCE
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Degrees}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \PLACEHOLDEREDUCATION
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Programming}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \PLACEHOLDERPROGRAMMING
+\end{tabular}
+\end{minipage}
+
+\PLACEHOLDERCURRICULUM
+\vspace{3em}
+
+\begin{minipage}[t]{0.3\textwidth}
+\PLACEHOLDERCERTIFICATES
+\bigskip
+
+\section*{Languages}
+\begin{tabular}{l | ll}
+\PLACEHOLDERLANGUAGES
+\end{tabular}
+\bigskip
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\PLACEHOLDERPUBS
+\end{minipage}
+
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small \PLACEHOLDERFOOTER
+}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}

@@ -1,0 +1,83 @@
+{
+  "templateId": "sixty-seconds-cv",
+  "version": "1.0.0",
+  "metadata": {
+    "name": "SixtySecondsCV",
+    "description": "Modern sidebar CV template with customizable colors and clean design",
+    "mainFile": "sixtysecondscv.tex"
+  },
+  "colorSchemes": {
+    "default": {
+      "label": "Default",
+      "command": "",
+      "type": "predefined"
+    }
+  },
+  "fonts": {
+    "default": {
+      "label": "Default",
+      "packages": [],
+      "commands": ""
+    }
+  },
+  "sections": {
+    "experience": {
+      "label": "Experience",
+      "pattern": "\\\\begin\\{experience\\}[\\s\\S]*?\\\\end\\{experience\\}",
+      "startMarker": "\\\\begin\\{experience\\}",
+      "endMarker": "\\\\end\\{experience\\}",
+      "removable": true
+    },
+    "education": {
+      "label": "Education",
+      "pattern": "\\\\begin\\{education\\}[\\s\\S]*?\\\\end\\{education\\}",
+      "startMarker": "\\\\begin\\{education\\}",
+      "endMarker": "\\\\end\\{education\\}",
+      "removable": true
+    }
+  },
+  "placeholders": {
+    "name": {
+      "label": "Name",
+      "type": "text",
+      "default": ""
+    },
+    "email": {
+      "label": "Email",
+      "type": "email",
+      "default": ""
+    },
+    "phone": {
+      "label": "Phone",
+      "type": "phone",
+      "default": ""
+    },
+    "address": {
+      "label": "Address",
+      "type": "text",
+      "default": ""
+    },
+    "about": {
+      "label": "About",
+      "type": "textarea",
+      "default": ""
+    },
+    "skills": {
+      "label": "Skills",
+      "type": "textarea",
+      "default": ""
+    }
+  },
+  "preambleInsertPoint": "\\\\begin\\{document\\}",
+  "documentInsertPoint": "\\\\begin\\{document\\}",
+  "engine": "xelatex",
+  "features": {
+    "supportsColorSchemes": false,
+    "supportsFonts": false,
+    "supportsSectionToggle": true,
+    "supportsCustomColors": true
+  }
+}
+
+
+

@@ -1,0 +1,128 @@
+[
+  {
+    "id": "customised-curve-cv",
+    "name": "Customised Curve CV",
+    "source": "overleaf",
+    "type": "latex",
+    "author": "LianTze Lim",
+    "description": "Modern CV with light green and maroon accents, horizontal layout",
+    "category": ["modern", "professional"],
+    "features": ["horizontal", "color-accents", "clean"],
+    "difficulty": "easy",
+    "thumbnails": {
+      "small": "customised-curve-cv-small.jpg",
+      "large": "customised-curve-cv-large.jpg"
+    },
+    "jobTypes": ["software-engineer", "business", "general"],
+    "years": ["entry", "mid"],
+    "file": "cv-llt.tex"
+  },
+  {
+    "id": "altacv",
+    "name": "AltaCV",
+    "source": "overleaf",
+    "type": "latex",
+    "author": "LianTze Lim",
+    "description": "Two-column CV with red/gold accents, compact layout",
+    "category": ["modern", "academic"],
+    "features": ["two-column", "compact", "color-accents"],
+    "difficulty": "easy",
+    "thumbnails": {
+      "small": "altacv-small.jpg",
+      "large": "altacv-large.jpg"
+    },
+    "jobTypes": ["software-engineer", "researcher", "academic"],
+    "years": ["entry", "mid"],
+    "file": "sample.tex"
+  },
+  {
+    "id": "simple-hipster-cv",
+    "name": "Simple Hipster CV",
+    "source": "overleaf",
+    "type": "latex",
+    "author": "Overleaf Community",
+    "description": "Sidebar layout with teal accents, hipster style",
+    "category": ["modern", "creative"],
+    "features": ["sidebar", "creative", "color-accents"],
+    "difficulty": "easy",
+    "thumbnails": {
+      "small": "simple-hipster-cv-small.jpg",
+      "large": "simple-hipster-cv-large.jpg"
+    },
+    "jobTypes": ["designer", "developer", "creative"],
+    "years": ["entry", "mid"],
+    "file": "main.tex"
+  },
+  {
+    "id": "cv-template",
+    "name": "CV Template",
+    "source": "custom",
+    "type": "latex",
+    "author": "Custom",
+    "description": "Professional CV template with clean layout and structured sections",
+    "category": ["modern", "professional"],
+    "features": ["structured", "clean", "professional"],
+    "difficulty": "easy",
+    "thumbnails": {
+      "small": "cv-template-small.jpg",
+      "large": "cv-template-large.jpg"
+    },
+    "jobTypes": ["general", "professional", "academic"],
+    "years": ["entry", "mid", "senior"],
+    "file": "CV Template_main.tex"
+  },
+  {
+    "id": "resume-template",
+    "name": "Resume Template",
+    "source": "custom",
+    "type": "latex",
+    "author": "Custom",
+    "description": "Clean and professional resume template with structured layout",
+    "category": ["modern", "professional"],
+    "features": ["clean", "structured", "professional"],
+    "difficulty": "easy",
+    "thumbnails": {
+      "small": "resume-template-small.jpg",
+      "large": "resume-template-large.jpg"
+    },
+    "jobTypes": ["general", "professional"],
+    "years": ["entry", "mid", "senior"],
+    "file": "Resume Template.tex"
+  },
+  {
+    "id": "maltacv",
+    "name": "MAltaCV",
+    "source": "overleaf",
+    "type": "latex",
+    "author": "Riccardo Mancini",
+    "description": "Modern two-column CV template based on AltaCV with enhanced features",
+    "category": ["modern", "academic", "professional"],
+    "features": ["two-column", "modern", "color-accents"],
+    "difficulty": "easy",
+    "thumbnails": {
+      "small": "maltacv-small.jpg",
+      "large": "maltacv-large.jpg"
+    },
+    "jobTypes": ["software-engineer", "researcher", "academic"],
+    "years": ["entry", "mid", "senior"],
+    "file": "cv.tex"
+  },
+  {
+    "id": "sixty-seconds-cv",
+    "name": "SixtySecondsCV",
+    "source": "overleaf",
+    "type": "latex",
+    "author": "L. Gueroult",
+    "description": "Modern sidebar CV template with customizable colors and clean design",
+    "category": ["modern", "creative", "professional"],
+    "features": ["sidebar", "color-customizable", "modern"],
+    "difficulty": "medium",
+    "thumbnails": {
+      "small": "sixty-seconds-cv-small.jpg",
+      "large": "sixty-seconds-cv-large.jpg"
+    },
+    "jobTypes": ["designer", "developer", "general"],
+    "years": ["entry", "mid", "senior"],
+    "file": "sixtysecondscv.tex"
+  }
+]

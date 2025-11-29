@@ -1,0 +1,87 @@
+{
+  "templateId": "altacv",
+  "version": "1.0.0",
+  "metadata": {
+    "name": "AltaCV",
+    "description": "Two-column CV with red/gold accents, compact layout",
+    "mainFile": "sample.tex"
+  },
+  "colorSchemes": {
+    "default": {
+      "label": "Default (Red & Gold)",
+      "command": "",
+      "type": "predefined"
+    }
+  },
+  "fonts": {
+    "default": {
+      "label": "Default (Roboto Slab & Lato)",
+      "packages": ["roboto", "lato"],
+      "commands": "\\setmainfont{Roboto Slab}\\setsansfont{Lato}\\renewcommand{\\familydefault}{\\sfdefault}"
+    },
+    "helvetica": {
+      "label": "Helvetica",
+      "packages": [],
+      "commands": "\\usepackage{helvet}\\renewcommand{\\familydefault}{\\sfdefault}"
+    }
+  },
+  "sections": {
+    "experience": {
+      "label": "Experience",
+      "pattern": "\\\\cvsection\\{Experience\\}[\\s\\S]*?(?=\\\\cvsection|\\\\end\\{document\\})",
+      "startMarker": "\\\\cvsection\\{Experience\\}",
+      "removable": true
+    },
+    "education": {
+      "label": "Education",
+      "pattern": "\\\\cvsection\\{Education\\}[\\s\\S]*?(?=\\\\cvsection|\\\\end\\{document\\})",
+      "startMarker": "\\\\cvsection\\{Education\\}",
+      "removable": true
+    },
+    "projects": {
+      "label": "Projects",
+      "pattern": "\\\\cvsection\\{Projects\\}[\\s\\S]*?(?=\\\\cvsection|\\\\end\\{document\\})",
+      "startMarker": "\\\\cvsection\\{Projects\\}",
+      "removable": true
+    }
+  },
+  "placeholders": {
+    "PLACEHOLDERNAME": {
+      "label": "Full Name",
+      "type": "text",
+      "default": ""
+    },
+    "PLACEHOLDERTAGLINE": {
+      "label": "Tagline",
+      "type": "text",
+      "default": ""
+    },
+    "PLACEHOLDERPERSONALINFO": {
+      "label": "Personal Info",
+      "type": "textarea",
+      "default": ""
+    },
+    "PLACEHOLDEREXPERIENCE": {
+      "label": "Experience",
+      "type": "textarea",
+      "default": ""
+    },
+    "PLACEHOLDEREDUCATION": {
+      "label": "Education",
+      "type": "textarea",
+      "default": ""
+    }
+  },
+  "preambleInsertPoint": "\\\\begin\\{document\\}",
+  "documentInsertPoint": "\\\\begin\\{document\\}",
+  "engine": "xelatex",
+  "features": {
+    "supportsColorSchemes": false,
+    "supportsFonts": true,
+    "supportsSectionToggle": true,
+    "supportsCustomColors": true
+  }
+}
+
+
+

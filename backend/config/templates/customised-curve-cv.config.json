@@ -1,0 +1,56 @@
+{
+  "templateId": "customised-curve-cv",
+  "version": "1.0.0",
+  "metadata": {
+    "name": "Customised Curve CV",
+    "description": "Modern CV with light green and maroon accents, horizontal layout",
+    "mainFile": "cv-llt.tex"
+  },
+  "colorSchemes": {
+    "default": {
+      "label": "Default (Green & Maroon)",
+      "command": "",
+      "type": "predefined"
+    }
+  },
+  "fonts": {
+    "default": {
+      "label": "Default (Cochineal & Cabin)",
+      "packages": ["cochineal", "cabin"],
+      "commands": ""
+    }
+  },
+  "sections": {
+    "experience": {
+      "label": "Experience",
+      "pattern": "\\\\cvevent[\\s\\S]*?(?=\\\\cvevent|\\\\cvsection|\\\\end\\{document\\})",
+      "startMarker": "\\\\cvevent",
+      "removable": true
+    },
+    "education": {
+      "label": "Education",
+      "pattern": "\\\\cvevent[\\s\\S]*?(?=\\\\cvevent|\\\\cvsection|\\\\end\\{document\\})",
+      "startMarker": "\\\\cvevent",
+      "removable": true
+    }
+  },
+  "placeholders": {
+    "PLACEHOLDERNAME": {
+      "label": "Full Name",
+      "type": "text",
+      "default": ""
+    }
+  },
+  "preambleInsertPoint": "\\\\begin\\{document\\}",
+  "documentInsertPoint": "\\\\begin\\{document\\}",
+  "engine": "xelatex",
+  "features": {
+    "supportsColorSchemes": false,
+    "supportsFonts": true,
+    "supportsSectionToggle": true,
+    "supportsCustomColors": true
+  }
+}
+
+
+

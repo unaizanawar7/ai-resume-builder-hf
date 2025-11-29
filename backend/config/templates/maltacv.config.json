@@ -1,0 +1,168 @@
+{
+  "templateId": "maltacv",
+  "version": "1.0.0",
+  "metadata": {
+    "name": "MAltaCV",
+    "description": "Modern two-column CV template based on AltaCV with enhanced features",
+    "mainFile": "cv.tex"
+  },
+  "colorSchemes": {
+    "raisinblack_flame": {
+      "label": "Raisin Black & Flame",
+      "command": "\\setcolorscheme{raisinblack_flame}",
+      "type": "predefined"
+    },
+    "darkpurple_princetonorange": {
+      "label": "Dark Purple & Princeton Orange",
+      "command": "\\setcolorscheme{darkpurple_princetonorange}",
+      "type": "predefined"
+    },
+    "blue_claret": {
+      "label": "Blue & Claret",
+      "command": "\\setcolorscheme{blue_claret}",
+      "type": "predefined"
+    },
+    "eerieblack_eggplant": {
+      "label": "Eerie Black & Eggplant",
+      "command": "\\setcolorscheme{eerieblack_eggplant}",
+      "type": "predefined"
+    },
+    "outerspace_forestgreen": {
+      "label": "Outer Space & Forest Green",
+      "command": "\\setcolorscheme{outerspace_forestgreen}",
+      "type": "predefined"
+    },
+    "raisinblack_midnightgreen": {
+      "label": "Raisin Black & Midnight Green",
+      "command": "\\setcolorscheme{raisinblack_midnightgreen}",
+      "type": "predefined"
+    },
+    "teal_brown": {
+      "label": "Teal & Brown",
+      "command": "\\setcolorscheme{teal_brown}",
+      "type": "predefined"
+    },
+    "indigo": {
+      "label": "Indigo",
+      "command": "\\setcolorscheme{indigo}",
+      "type": "predefined"
+    },
+    "blue": {
+      "label": "Blue",
+      "command": "\\setcolorscheme{blue}",
+      "type": "predefined"
+    },
+    "violet": {
+      "label": "Violet",
+      "command": "\\setcolorscheme{violet}",
+      "type": "predefined"
+    }
+  },
+  "fonts": {
+    "default": {
+      "label": "Default (tgheros)",
+      "packages": ["tgheros"],
+      "commands": "\\usepackage{tgheros}\\renewcommand*\\familydefault{\\sfdefault}"
+    },
+    "lato": {
+      "label": "Lato",
+      "packages": ["lato"],
+      "commands": "\\usepackage[default]{lato}\\renewcommand*\\familydefault{\\sfdefault}"
+    },
+    "palatino": {
+      "label": "Palatino",
+      "packages": ["mathpazo"],
+      "commands": "\\usepackage{mathpazo}\\renewcommand*\\familydefault{\\rmdefault}"
+    }
+  },
+  "sections": {
+    "skills": {
+      "label": "Skills",
+      "pattern": "\\\\cvsection\\{Skills\\}[\\s\\S]*?(?=\\\\cvsection|\\\\end\\{document\\})",
+      "startMarker": "\\\\cvsection\\{Skills\\}",
+      "removable": true
+    },
+    "education": {
+      "label": "Education",
+      "pattern": "\\\\cvsection\\{Education\\}[\\s\\S]*?(?=\\\\cvsection|\\\\end\\{document\\})",
+      "startMarker": "\\\\cvsection\\{Education\\}",
+      "removable": true
+    },
+    "experience": {
+      "label": "Experience",
+      "pattern": "\\\\cvsection\\{Experience\\}[\\s\\S]*?(?=\\\\cvsection|\\\\end\\{document\\})",
+      "startMarker": "\\\\cvsection\\{Experience\\}",
+      "removable": true
+    },
+    "projects": {
+      "label": "Projects",
+      "pattern": "\\\\cvsection\\{Projects\\}[\\s\\S]*?(?=\\\\cvsection|\\\\end\\{document\\})",
+      "startMarker": "\\\\cvsection\\{Projects\\}",
+      "removable": true
+    }
+  },
+  "placeholders": {
+    "FULL_NAME": {
+      "label": "Full Name",
+      "type": "text",
+      "default": ""
+    },
+    "FIRST_NAME": {
+      "label": "First Name",
+      "type": "text",
+      "default": ""
+    },
+    "LAST_NAME": {
+      "label": "Last Name",
+      "type": "text",
+      "default": ""
+    },
+    "TAGLINE": {
+      "label": "Tagline",
+      "type": "text",
+      "default": ""
+    },
+    "EMAIL": {
+      "label": "Email",
+      "type": "email",
+      "default": ""
+    },
+    "PHONE_NUMBER": {
+      "label": "Phone Number",
+      "type": "phone",
+      "default": ""
+    },
+    "LINKEDIN_USERNAME": {
+      "label": "LinkedIn Username",
+      "type": "text",
+      "default": ""
+    },
+    "GITHUB_USERNAME": {
+      "label": "GitHub Username",
+      "type": "text",
+      "default": ""
+    },
+    "BIO_TEXT": {
+      "label": "Bio",
+      "type": "textarea",
+      "default": ""
+    },
+    "SKILLS_LIST": {
+      "label": "Skills List",
+      "type": "textarea",
+      "default": ""
+    }
+  },
+  "preambleInsertPoint": "\\\\begin\\{document\\}",
+  "documentInsertPoint": "\\\\begin\\{document\\}",
+  "engine": "xelatex",
+  "features": {
+    "supportsColorSchemes": true,
+    "supportsFonts": true,
+    "supportsSectionToggle": true,
+    "supportsCustomColors": true
+  }
+}
+
+
+

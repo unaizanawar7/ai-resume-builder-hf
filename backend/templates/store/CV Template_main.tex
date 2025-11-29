@@ -1,0 +1,226 @@
+\documentclass[paper=a4,fontsize=11pt]{temp} % KOMA-article class
+
+%% ========================================
+%% PERSONAL INFORMATION - EDIT THESE FIELDS
+%% ========================================
+
+% Basic Info
+\newcommand{\name}{John Doe}
+\newcommand{\email}{john.doe@ist.utl.pt}
+\newcommand{\phone}{(+351)93123123123}  % Uncomment to use
+\newcommand{\website}{yourwebsite.com}   % Uncomment to use
+\newcommand{\photopath}{photo}
+
+%% ========================================
+%% WORK EXPERIENCE - EDIT THESE ENTRIES
+%% ========================================
+
+% Work Entry 1
+\newcommand{\workOneTitle}{Write Latex}
+\newcommand{\workOneDates}{Sep 2010 - Feb 2016}
+\newcommand{\workOnePosition}{R\&D Engineer}
+\newcommand{\workOneDescription}{Placeholder text designed to have exactly three lines. Three lines describing what you did in this job is just about right for this template. Keep it simple and understandable. Let the details for the interview.}
+\newcommand{\workOneLogo}{IMG/writeL}
+
+% Work Entry 2
+\newcommand{\workTwoTitle}{McDonalds}
+\newcommand{\workTwoDates}{Feb 2015 - Aug 2015}
+\newcommand{\workTwoPosition}{Collaborator}
+\newcommand{\workTwoDescription}{Placeholder text designed to have exactly three lines. Three lines describing what you did in this job is just about right for this template. Keep it simple and understandable. Let the details for the interview.}
+\newcommand{\workTwoLogo}{IMG/mcdonalds}
+
+% Work Entry 3
+\newcommand{\workThreeTitle}{Banco Alimentar}
+\newcommand{\workThreeDates}{Jul 2015}
+\newcommand{\workThreePosition}{Volunteer}
+\newcommand{\workThreeDescription}{Placeholder text designed to have exactly three lines. Three lines describing what you did in this job is just about right for this template. Keep it simple and understandable. Let the details for the interview.}
+\newcommand{\workThreeLogo}{IMG/Banco-Alimentar}
+
+%% ========================================
+%% EDUCATION - EDIT THESE ENTRIES
+%% ========================================
+
+% Education Entry 1
+\newcommand{\eduOneTitle}{Phd. Mechanical Engineering}
+\newcommand{\eduOneDates}{Jul 2015}
+\newcommand{\eduOneSchool}{AGH University of Science and Technology, Krakow}
+\newcommand{\eduOneDescription}{Placeholder text designed to have exactly three lines. Three lines describing what you did in this job is just about right for this template. Keep it simple and understandable. Let the details for the interview.}
+\newcommand{\eduOneLogo}{IMG/agh}
+
+% Education Entry 2
+\newcommand{\eduTwoTitle}{MSc. Mechanical Engineering}
+\newcommand{\eduTwoDates}{Sep 2010 - Today}
+\newcommand{\eduTwoSchool}{Instituto Superior Técnico}
+\newcommand{\eduTwoDescription}{Placeholder text designed to have exactly three lines. Three lines describing what you did in this job is just about right for this template. Keep it simple and understandable. Let the details for the interview.}
+\newcommand{\eduTwoLogo}{IMG/I}
+
+% Education Entry 3
+\newcommand{\eduThreeTitle}{Erasmus Program}
+\newcommand{\eduThreeDates}{Feb 2014 - Aug 2014}
+\newcommand{\eduThreeSchool}{Technische Universität München}
+\newcommand{\eduThreeDescription}{Placeholder text designed to have exactly three lines. Three lines describing what you did in this job is just about right for this template. Keep it simple and understandable. Let the details for the interview.}
+\newcommand{\eduThreeLogo}{IMG/TUM}
+
+%% ========================================
+%% LANGUAGES - EDIT THESE ENTRIES
+%% ========================================
+
+\newcommand{\langOneFlag}{IMG/flag/pt}
+\newcommand{\langOneLevel}{Native Speaker}
+
+\newcommand{\langTwoFlag}{IMG/flag/fr}
+\newcommand{\langTwoLevel}{Professional user}
+
+\newcommand{\langThreeFlag}{IMG/flag/gb}
+\newcommand{\langThreeLevel}{Professional Proficiency}
+
+\newcommand{\langFourFlag}{IMG/flag/de}
+\newcommand{\langFourLevel}{Conversational level}
+
+\newcommand{\langFiveFlag}{IMG/flag/es}
+\newcommand{\langFiveLevel}{Conversational level}
+
+%% ========================================
+%% SOFTWARE SKILLS - EDIT THESE ENTRIES
+%% ========================================
+
+\newcommand{\softOneIcon}{IMG/soft/Matlab}
+\newcommand{\softOneDesc}{This software experience. fillertext fillertext fillertex}
+
+\newcommand{\softTwoIcon}{IMG/soft/office}
+\newcommand{\softTwoDesc}{This software experience. fillertext fillertext fillertex}
+
+\newcommand{\softThreeIcon}{IMG/soft/Matlab}
+\newcommand{\softThreeDesc}{This software experience. fillertext fillertext fillertex}
+
+\newcommand{\softFourIcon}{IMG/soft/office}
+\newcommand{\softFourDesc}{This software experience. fillertext fillertext fillertex}
+
+\newcommand{\softFiveIcon}{IMG/soft/Matlab}
+\newcommand{\softFiveDesc}{This software experience. fillertext fillertext fillertex}
+
+\newcommand{\softSixIcon}{IMG/soft/Matlab}
+\newcommand{\softSixDesc}{This software experience. fillertext fillertext fillertex}
+
+\newcommand{\softSevenIcon}{IMG/soft/office}
+\newcommand{\softSevenDesc}{This software experience. fillertext fillertext fillertex}
+
+\newcommand{\softEightIcon}{IMG/soft/Matlab}
+\newcommand{\softEightDesc}{This software experience. fillertext fillertext fillertex}
+
+%% ========================================
+%% HOBBIES/ACHIEVEMENTS - EDIT THESE ENTRIES
+%% ========================================
+
+\newcommand{\hobbyOne}{hobby1}
+\newcommand{\hobbyOneDesc}{Small achievments text. fillertext fillertext fillertex fillertext fillertex}
+
+\newcommand{\hobbyTwo}{hobby2}
+\newcommand{\hobbyTwoDesc}{Small achievments text. fillertext fillertext fillertex fillertext fillertex}
+
+\newcommand{\hobbyThree}{hobby3}
+\newcommand{\hobbyThreeDesc}{Small achievments text. fillertext fillertext fillertex fillertext fillertex}
+
+%% ========================================
+%% DOCUMENT CONTENT (DO NOT EDIT BELOW)
+%% ========================================
+
+\begin{document}
+
+\begin{minipage}{.2\linewidth}
+   \includegraphics[width=1\textwidth]{\photopath}
+\end{minipage}      
+\begin{minipage}{0.7\linewidth}
+   \MyName{\name}
+   \sepspace
+   \noindent
+   
+   \hfill \email  
+   
+   %\hfill \website  % Uncomment to show website
+   
+   %\hfill \phone  % Uncomment to show phone
+ 
+\end{minipage}
+
+
+\NewPart{Work experience}{}
+\noindent
+
+
+\workEntry{\workOneTitle}{\workOneDates}{\workOnePosition}{\workOneDescription}{\workOneLogo}
+
+\sepspace
+
+\workEntry{\workTwoTitle}{\workTwoDates}{\workTwoPosition}{\workTwoDescription}{\workTwoLogo}
+
+\sepspace
+
+\workEntry{\workThreeTitle}{\workThreeDates}{\workThreePosition}{\workThreeDescription}{\workThreeLogo}
+
+
+
+\NewPart{Education}{}
+\noindent
+
+
+\EducationEntry{\eduOneTitle}{\eduOneDates}{\eduOneSchool}{\eduOneDescription}{\eduOneLogo}
+
+\sepspace
+
+
+\EducationEntry{\eduTwoTitle}{\eduTwoDates}{\eduTwoSchool}{\eduTwoDescription}{\eduTwoLogo}
+
+\sepspace
+
+\EducationEntry{\eduThreeTitle}{\eduThreeDates}{\eduThreeSchool}{\eduThreeDescription}{\eduThreeLogo}
+
+\sepspace
+
+\NewPart{Skills \& Interests}{}
+\hspace{3mm}
+\begin{minipage}[t]{0.33\textwidth} 
+
+\begin{tabular}[t]{ l l }
+\flag{\langOneFlag}  & \langOneLevel \\
+\flag{\langTwoFlag}  & \langTwoLevel \\
+\flag{\langThreeFlag}  & \langThreeLevel \\
+\flag{\langFourFlag}  & \langFourLevel \\
+\flag{\langFiveFlag}  & \langFiveLevel \\
+\end{tabular}
+
+\sepspace
+
+\end{minipage}
+%
+\begin{minipage}[t]{0.66\textwidth} 
+
+
+\begin{tabular}[t]{l l}
+\software{\softOneIcon}  	 & \softOneDesc\\
+\software{\softTwoIcon} 		 & \softTwoDesc\\
+\software{\softThreeIcon}  	 & \softThreeDesc\\
+\software{\softFourIcon} 		 & \softFourDesc\\
+\software{\softFiveIcon}  	 & \softFiveDesc\\
+\end{tabular}
+
+
+
+\end{minipage}
+
+\begin{tabular}{l l}
+\software{\softSixIcon}  	 & \softSixDesc\\
+\software{\softSevenIcon} 		 & \softSevenDesc\\
+\software{\softEightIcon}  	 & \softEightDesc\\
+
+\hobbyOne,   & \hobbyOneDesc\\
+\hobbyTwo,   & \hobbyTwoDesc\\
+\hobbyThree,   & \hobbyThreeDesc\\
+\end{tabular}
+
+
+
+%%% References
+%%% ------------------------------------------------------------
+
+\end{document}

@@ -1,0 +1,86 @@
+{
+  "templateId": "simple-hipster-cv",
+  "version": "1.0.0",
+  "metadata": {
+    "name": "Simple Hipster CV",
+    "description": "Sidebar layout with teal accents, hipster style",
+    "mainFile": "main.tex"
+  },
+  "colorSchemes": {
+    "default": {
+      "label": "Default",
+      "command": "",
+      "type": "predefined"
+    }
+  },
+  "fonts": {
+    "default": {
+      "label": "Default (Raleway)",
+      "packages": ["raleway"],
+      "commands": "\\usepackage[default]{raleway}"
+    }
+  },
+  "sections": {
+    "experience": {
+      "label": "Experience",
+      "pattern": "\\\\cvdegree[\\s\\S]*?(?=\\\\cvdegree|\\\\cvsection|\\\\end\\{document\\})",
+      "startMarker": "\\\\cvdegree",
+      "removable": true
+    },
+    "education": {
+      "label": "Education",
+      "pattern": "\\\\cvdegree[\\s\\S]*?(?=\\\\cvdegree|\\\\cvsection|\\\\end\\{document\\})",
+      "startMarker": "\\\\cvdegree",
+      "removable": true
+    }
+  },
+  "placeholders": {
+    "PLACEHOLDERFIRSTNAME": {
+      "label": "First Name",
+      "type": "text",
+      "default": ""
+    },
+    "PLACEHOLDERLASTNAME": {
+      "label": "Last Name",
+      "type": "text",
+      "default": ""
+    },
+    "PLACEHOLDERTITLE": {
+      "label": "Title",
+      "type": "text",
+      "default": ""
+    },
+    "PLACEHOLDERABOUTME": {
+      "label": "About Me",
+      "type": "textarea",
+      "default": ""
+    },
+    "PLACEHOLDERPERSONALINFO": {
+      "label": "Personal Info",
+      "type": "textarea",
+      "default": ""
+    },
+    "PLACEHOLDERSPECIALIZATION": {
+      "label": "Specialization",
+      "type": "textarea",
+      "default": ""
+    },
+    "PLACEHOLDERINTERESTS": {
+      "label": "Interests",
+      "type": "textarea",
+      "default": ""
+    }
+  },
+  "preambleInsertPoint": "\\\\begin\\{document\\}",
+  "documentInsertPoint": "\\\\begin\\{document\\}",
+  "engine": "pdflatex",
+  "features": {
+    "supportsColorSchemes": false,
+    "supportsFonts": true,
+    "supportsSectionToggle": true,
+    "supportsCustomColors": false
+  }
+}
+
+
+

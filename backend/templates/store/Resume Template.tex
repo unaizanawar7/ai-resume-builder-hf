@@ -1,0 +1,86 @@
+\documentclass{resume}
+\begin{document}
+\fontfamily{ppl}\selectfont
+\noindent
+\begin{tabularx}{\linewidth}{@{}m{0.75\textwidth} m{0\textwidth}@{}}
+{
+    \large {FULL_NAME} \newline
+    \small{
+        TAGLINE\newline
+    \href{}{ADDRESS} \textbf{·} \newline
+        \clink{
+            \href{PORTFOLIO_URL}{Portfolio} \textbf{·}
+            \href{mailto:EMAIL}{EMAIL} \textbf{·}
+            \href{tel:PHONE}{PHONE}
+            \textbf{·}
+             \href{GITHUB_URL}{GitHub}\newline
+             \href{LINKEDIN_URL}{LinkedIn}
+             \textbf{·} 
+             \href{CODING_PROFILE_URL}{Coding Profiles}
+             \textbf{·} 
+             \href{VIDEO_RESUME_URL}{Video Resume}
+        } \newline
+    }
+}
+& 
+{
+    \includegraphics[width=4cm]{PROFILE_IMAGE}
+}
+\end{tabularx}
+\csection{Summary}{\small
+    \begin{itemize}
+        \item \footnotesize SUMMARY_TEXT
+    \end{itemize}
+}
+\csection{EDUCATION}{\small
+    \begin{itemize}
+        \item \textbf{EDUCATION_LEVEL\hspace{29em}(START_YEAR-END_YEAR)}\newline{INSTITUTION}\newline{Marks/CGPA: MARKS_CGPA}
+    \end{itemize}
+}
+ 
+\csection{SKILLS}{\small
+    \begin{itemize}
+        \item \textbf{SKILLS_CATEGORY} \newline
+        {\footnotesize SKILLS_LIST}{}{}
+    \end{itemize}
+}
+
+\csection{PROJECTS}{\small
+    \begin{itemize}
+        \item \textbf{PROJECT_NAME}
+        {\footnotesize \hspace{34.5em}\href{PROJECT_DEMO_URL}{Link}}\hspace{5em}{\href{PROJECT_GITHUB_URL}{Github}}{}
+    \end{itemize}
+}
+    
+\csection{Significant Roles}{\small
+    \begin{itemize}
+        \item \textbf{ROLE_NAME \hspace{17.5em}START_MONTH YEAR – END_MONTH YEAR (DURATION)}\newline{LOCATION}{}{}{}
+    \end{itemize}
+}
+    
+\csection{EXPERIENCE}{\small
+    \begin{itemize}
+        \item \textbf{EMPLOYER_NAME \hspace{18em}START_MONTH YEAR – END_MONTH YEAR (DURATION)}\newline{DESIGNATION}{}{}{}
+    \end{itemize}
+}
+    
+\csection{Global Certifications}{\small
+    \begin{itemize}
+        \item \textbf{CERTIFICATION_NAME} 
+        {\hspace{22em}Overall Score: SCORE}{}{}
+    \end{itemize}
+}
+        
+\csection{References}{\small
+    \begin{itemize}
+        \item \textbf{REFERRER_NAME}\newline{\footnotesize REFERRER_DESIGNATION. \hspace{34.5em}\href{tel:REFERRER_PHONE}{Contact}}{}
+    \end{itemize}
+}
+
+\csection{Declaration}{\small
+    \begin{itemize}
+        \item \footnotesize I hereby declare that the above mentioned information is correct up to my knowledge and I bear the responsibility for the correctness of the above mentioned.
+    \end{itemize}
+}
+
+\end{document}

@@ -1,0 +1,174 @@
+{
+  "templateId": "resume-template",
+  "version": "1.0.0",
+  "metadata": {
+    "name": "Resume Template",
+    "description": "Clean and professional resume template with structured layout",
+    "mainFile": "Resume Template.tex"
+  },
+  "colorSchemes": {
+    "default": {
+      "label": "Default",
+      "command": "",
+      "type": "predefined"
+    }
+  },
+  "fonts": {
+    "default": {
+      "label": "Default",
+      "packages": [],
+      "commands": ""
+    }
+  },
+  "sections": {
+    "summary": {
+      "label": "Summary",
+      "pattern": "\\\\csection\\{Summary\\}[\\s\\S]*?(?=\\\\csection|\\\\end\\{document\\})",
+      "startMarker": "\\\\csection\\{Summary\\}",
+      "removable": true
+    },
+    "education": {
+      "label": "Education",
+      "pattern": "\\\\csection\\{EDUCATION\\}[\\s\\S]*?(?=\\\\csection|\\\\end\\{document\\})",
+      "startMarker": "\\\\csection\\{EDUCATION\\}",
+      "removable": true
+    },
+    "skills": {
+      "label": "Skills",
+      "pattern": "\\\\csection\\{SKILLS\\}[\\s\\S]*?(?=\\\\csection|\\\\end\\{document\\})",
+      "startMarker": "\\\\csection\\{SKILLS\\}",
+      "removable": true
+    },
+    "projects": {
+      "label": "Projects",
+      "pattern": "\\\\csection\\{PROJECTS\\}[\\s\\S]*?(?=\\\\csection|\\\\end\\{document\\})",
+      "startMarker": "\\\\csection\\{PROJECTS\\}",
+      "removable": true
+    },
+    "experience": {
+      "label": "Experience",
+      "pattern": "\\\\csection\\{EXPERIENCE\\}[\\s\\S]*?(?=\\\\csection|\\\\end\\{document\\})",
+      "startMarker": "\\\\csection\\{EXPERIENCE\\}",
+      "removable": true
+    }
+  },
+  "placeholders": {
+    "FULL_NAME": {
+      "label": "Full Name",
+      "type": "text",
+      "default": ""
+    },
+    "TAGLINE": {
+      "label": "Tagline",
+      "type": "text",
+      "default": ""
+    },
+    "EMAIL": {
+      "label": "Email",
+      "type": "email",
+      "default": ""
+    },
+    "PHONE": {
+      "label": "Phone",
+      "type": "phone",
+      "default": ""
+    },
+    "ADDRESS": {
+      "label": "Address",
+      "type": "text",
+      "default": ""
+    },
+    "PORTFOLIO_URL": {
+      "label": "Portfolio URL",
+      "type": "url",
+      "default": ""
+    },
+    "GITHUB_URL": {
+      "label": "GitHub URL",
+      "type": "url",
+      "default": ""
+    },
+    "LINKEDIN_URL": {
+      "label": "LinkedIn URL",
+      "type": "url",
+      "default": ""
+    },
+    "SUMMARY_TEXT": {
+      "label": "Summary Text",
+      "type": "textarea",
+      "default": ""
+    },
+    "EDUCATION_LEVEL": {
+      "label": "Education Level",
+      "type": "text",
+      "default": ""
+    },
+    "INSTITUTION": {
+      "label": "Institution",
+      "type": "text",
+      "default": ""
+    },
+    "START_YEAR": {
+      "label": "Start Year",
+      "type": "text",
+      "default": ""
+    },
+    "END_YEAR": {
+      "label": "End Year",
+      "type": "text",
+      "default": ""
+    },
+    "MARKS_CGPA": {
+      "label": "Marks/CGPA",
+      "type": "text",
+      "default": ""
+    },
+    "SKILLS_CATEGORY": {
+      "label": "Skills Category",
+      "type": "text",
+      "default": ""
+    },
+    "SKILLS_LIST": {
+      "label": "Skills List",
+      "type": "textarea",
+      "default": ""
+    },
+    "PROJECT_NAME": {
+      "label": "Project Name",
+      "type": "text",
+      "default": ""
+    },
+    "PROJECT_DEMO_URL": {
+      "label": "Project Demo URL",
+      "type": "url",
+      "default": ""
+    },
+    "PROJECT_GITHUB_URL": {
+      "label": "Project GitHub URL",
+      "type": "url",
+      "default": ""
+    },
+    "EMPLOYER_NAME": {
+      "label": "Employer Name",
+      "type": "text",
+      "default": ""
+    },
+    "DESIGNATION": {
+      "label": "Designation",
+      "type": "text",
+      "default": ""
+    }
+  },
+  "preambleInsertPoint": "\\\\begin\\{document\\}",
+  "documentInsertPoint": "\\\\begin\\{document\\}",
+  "engine": "pdflatex",
+  "features": {
+    "supportsColorSchemes": false,
+    "supportsFonts": false,
+    "supportsSectionToggle": true,
+    "supportsCustomColors": false
+  }
+}
+
+
+

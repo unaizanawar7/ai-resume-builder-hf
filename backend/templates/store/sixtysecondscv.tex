@@ -1,0 +1,293 @@
+% SixtySecondsCV LaTeX template
+% Copyright © 2020 L. Gueroult <lgueroult-at-hotmail.com>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Please visit https://github.com/LaGuer/SixtySecondsCV for the most
+% recent version! For bugs or feature requests, please open a new issue on
+% github.
+%
+% Contributors
+% ------------
+% * ifokkema
+% * Bertbk
+% * Hespe
+% * esben
+%
+% Attributions
+% ------------
+% * sixtysecondscv is based on the fortysecondcv class by Rene Wirnata
+%   (rene.wirnata@pandascience.net), released under the 3-Clause BSD license and available at
+%   https://github.com/PandaScience/FortySecondsCV/
+% * fortysecondcv is based on the twentysecondcv class by Carmine Spagnuolo
+%   (cspagnuolo@unisa.it), released under the MIT license and available at
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
+
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+	a4paper,
+	% showframes,
+	% vline=2.2em,
+	%maincolor=cvgreen,
+	sidecolor=gray!50,
+	sectioncolor=materialblue,
+	subsectioncolor=materialindigo,
+	% itemtextcolor=black!80,
+	% sidebarwidth=0.4\paperwidth,
+	% topbottommargin=0.03\paperheight,
+	% leftrightmargin=20pt,
+	profilepicsize=3.5cm,
+	% profilepicborderwidth=3.5pt,
+	profilepicstyle=profilecircle,
+	profilepiczoom=1.0,
+	% profilepicxshift=0mm,
+	% profilepicyshift=0mm,
+	% profilepicrounding=1.0cm,
+	% logowidth=4.5cm,
+	% logospace=5mm,
+	% logoposition=before,
+]{sixtysecondscv}
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% uncomment in case you don't want any hyphenation
+% \usepackage[none]{hyphenat}
+
+% take care of proper font encoding
+\ifxetexorluatex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+%	\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+%	\usepackage[sfdefault]{noto} % use noto google font
+\fi
+
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+	% default font size is \large, so adjust to harmonize with sidebar layout
+	bubble center node font = \footnotesize,
+	bubble node font = \footnotesize,
+	% default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+	bubble center node size = 0.4\sidebartextwidth,
+	bubble node size = 0.25\sidebartextwidth,
+	distance center/other bubbles = 1.5em,
+	% set center bubble color
+	bubble center node color = maincolor!70,
+	% define the list of colors usable in the diagram
+	set color list = {materiallime, materialamber,
+	materialcyan, materialblue, materialindigo},
+	% sets the opacity at which the bubbles are shown
+	bubble fill opacity = 0.8,
+}
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+%% mandatory information
+% your name
+\cvname{FULL_NAME}
+% job title/career
+\cvjobtitle{JOB_TITLE}
+
+%% optional information
+% profile picture
+\cvprofilepic{PROFILE_IMAGE_PATH}
+% logo picture
+%\cvlogopic{LOGO_PATH}
+
+% NOTE: ordering in sidebar will mimic the following order
+% date of birth
+\cvbirthday{BIRTH_DATE}
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{ADDRESS}
+% phone number
+\cvphone{PHONE_NUMBER}
+% skype ID
+\cvskype{SKYPE_ID}
+% personal website
+\cvsite{WEBSITE_URL}
+% email address
+\cvmail{EMAIL}
+% pgp key
+\cvkey{PGP_KEY_SIZE}{PGP_KEY_ID}
+% any other custom entry
+\cvcustomdata{\faFlag}{CUSTOM_DATA}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+	% include gosquare national flags from https://github.com/gosquared/flags;
+	% naming according to ISO 3166-1 alpha-2 country codes
+	\graphicspath{{pics/flags/shiny/}}
+
+	% social network accounts incl. proper hyperlinks
+	\profilesection{Social Network}
+		\begin{icontable}{2.5em}{1em}
+			\social{\aiOverleafSquare}
+				{OVERLEAF_URL}
+				{OVERLEAF_TEXT}
+			\social{\aiResearchGate}
+				{RESEARCHGATE_URL}
+				{RESEARCHGATE_TEXT}
+			\social{\faGithub}
+				{GITHUB_URL}
+				{GITHUB_TEXT}
+		\end{icontable}
+
+	\profilesection{Languages}
+		LANGUAGE_SKILLS
+    
+    \begin{figure}\centering
+		\smartdiagram[bubble diagram]{
+			BUBBLE_DIAGRAM_CENTER,
+			BUBBLE_ITEM_1,
+			BUBBLE_ITEM_2,
+			BUBBLE_ITEM_3,
+			BUBBLE_ITEM_4,
+			BUBBLE_ITEM_5
+		}
+	\end{figure}
+	
+	\profilesection{Barskills}
+	BAR_SKILLS
+}
+    
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 2nd PAGE
+%-------------------------------------------------------------------------------
+\addtobacksidebar{
+	\profilesection{About Me}
+	\aboutme{
+		ABOUT_ME_TEXT
+	}
+
+	\profilesection{Diagrams}
+	\begin{sidebarminipage}
+		DIAGRAM_LABELS
+	\end{sidebarminipage}
+
+	\begin{figure}\centering
+		\smartdiagram[bubble diagram]{
+			BUBBLE_DIAGRAM_CENTER_2,
+			BUBBLE_ITEM_2_1,
+			BUBBLE_ITEM_2_2,
+			BUBBLE_ITEM_2_3,
+			BUBBLE_ITEM_2_4,
+			BUBBLE_ITEM_2_5
+		}
+	\end{figure}
+
+	\chartlabel{Wheel Chart}
+
+	\wheelchart{3.7em}{2em}{%
+	WHEEL_CHART_DATA
+	}
+	
+	\profilesection{Hard Skills}
+		HARD_SKILLS
+
+	\profilesection{Soft Skills}
+		SOFT_SKILLS
+			
+	\profilesection{Barskills}
+	BAR_SKILLS_2
+
+	\profilesection{Memberships}
+	\begin{memberships}
+		MEMBERSHIPS
+	\end{memberships}
+}
+
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+
+\cvsection{Working Experience}
+\begin{cvtable}[3]
+	WORK_EXPERIENCE_ITEMS
+\end{cvtable}
+
+
+\cvsection{Education}
+\cvsubsection{Postgraduate Training}
+\begin{cvtable}[1.5]
+	POSTGRADUATE_ITEMS
+\end{cvtable}
+
+
+\cvsubsection{Study}
+\begin{cvtable}[1.5]
+	STUDY_ITEMS
+\end{cvtable}
+
+\cvsection{Publications}
+\begin{cvtable}
+	PUBLICATION_ITEMS
+\end{cvtable}
+
+\cvsection{Awards}
+\begin{cvtable}
+	AWARD_ITEMS
+\end{cvtable}
+
+
+\cvsection{Extra-Curricular Activities}
+\begin{cvtable}
+	EXTRACURRICULAR_ITEMS
+\end{cvtable}
+
+
+\newpage
+\makebacksidebar
+
+\cvsection{section}
+\cvsubsection{Subsection}
+\begin{cvtable}
+	\cvitem{<dates>}{<cv-item title>}{<location>}{<optional: description>}
+\end{cvtable}
+
+\cvsection{cvitem}
+\cvsubsection{Multi-line with longer description}
+\begin{cvtable}
+	CVITEM_EXAMPLES
+\end{cvtable}
+
+\cvsubsection{One-line without description}
+\begin{cvtable}
+	CVITEM_SHORT_EXAMPLES
+\end{cvtable}
+
+\cvsection{cvitemshort}
+\cvsubsection{One-line}
+\begin{cvtable}
+	CVITEMSHORT_EXAMPLES
+\end{cvtable}
+
+\cvsubsection{Multi-line with longer description}
+\begin{cvtable}
+	CVITEMSHORT_LONG_EXAMPLES
+\end{cvtable}
+
+\cvsignature
+\end{document}
