@@ -13,17 +13,19 @@ This document provides step-by-step instructions to deploy your AI Resume Builde
 Before proceeding, ensure you have:
 
 - [ ] **MongoDB Connection String**
-  - Local MongoDB: `mongodb://localhost:27017/ai-resume-builder`
-  - OR MongoDB Atlas: `mongodb+srv://username:password@cluster.mongodb.net/database?retryWrites=true&w=majority`
+  - ⚠️ **For production, you need MongoDB Atlas** (local MongoDB won't work with Render)
+  - 📖 **Follow**: `MONGODB_ATLAS_SETUP.md for step-by-step instructions
+  - Connection string format: `mongodb+srv://username:password@cluster.mongodb.net/database?retryWrites=true&w=majority`
   - For Atlas: Make sure IP whitelist includes `0.0.0.0/0` (allows all IPs)
 
 - [ ] **AI API Key** (choose one):
   - Hugging Face API Key: Get from https://huggingface.co/settings/tokens
   - OR Gemini API Key: Get from https://makersuite.google.com/app/apikey
+  - ✅ **You have this configured** - check your `backend/.env` file
 
 - [ ] **JWT Secret** (generate a secure random string):
-  - You can use: `openssl rand -base64 32` (in terminal)
-  - OR use an online generator: https://randomkeygen.com/
+  - ✅ **Generated for you**: See `DEPLOYMENT_VALUES.md` for your JWT secret
+  - Or generate new: `openssl rand -base64 32` (in terminal)
 
 ---
 
@@ -65,11 +67,13 @@ Click **"Advanced"** → **"Add Environment Variable"** and add:
 |-----|-------|-------|
 | `NODE_ENV` | `production` | |
 | `PORT` | `10000` | Required for Render |
-| `MONGODB_URI` | Your MongoDB connection string | From prerequisites |
-| `HUGGINGFACE_API_KEY` | Your Hugging Face token | OR use GEMINI_API_KEY |
-| `GEMINI_API_KEY` | Your Gemini API key | OR use HUGGINGFACE_API_KEY |
-| `JWT_SECRET` | Your secure random string | From prerequisites |
+| `MONGODB_URI` | Your MongoDB Atlas connection string | From `MONGODB_ATLAS_SETUP.md` |
+| `HUGGINGFACE_API_KEY` | Your Hugging Face token | OR use GEMINI_API_KEY (check your `.env`) |
+| `GEMINI_API_KEY` | Your Gemini API key | OR use HUGGINGFACE_API_KEY (check your `.env`) |
+| `JWT_SECRET` | `BG7bYHv5BDaEWHGO3fgcV50maV4BAjuRbCtNASg7EiEGD+3tFbxw6oFWSMaeQhQ2` | See `DEPLOYMENT_VALUES.md` |
 | `FRONTEND_URL` | _(leave blank for now)_ | Add after frontend deploy |
+
+**Quick Reference**: See `DEPLOYMENT_VALUES.md` for all your deployment values
 
 **Important:**
 - You only need ONE of `HUGGINGFACE_API_KEY` or `GEMINI_API_KEY`, not both
